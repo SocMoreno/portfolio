@@ -226,6 +226,370 @@
 
 
 
+<div class="shane_tm_section" id="testimonials">
+<div class="shane_tm_testimonials">
+<div class="container">
+<div class="testimonials_inner wow fadeInUp" data-wow-duration="1.5s">
+<div class="left">
+<div class="shane_tm_title">
+<span>Testimonials</span>
+<h3>What clients say about working with me</h3>
+</div>
+</div>
+<div class="right">
+<ul class="owl-carousel" id="testimonials-carousel">
+<li class="item">
+<div class="texts">
+<p>Thank you for your valuable insight and assistance by creating such an easy to use, logical system. I look forward to working with you again in the future.</p>
+<div class="author">
+<div class="person-icon-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+<circle cx="30" cy="30" r="30" fill="#f0f0f0"/>
+<circle cx="30" cy="22" r="10" fill="#b0b0b0"/>
+<ellipse cx="30" cy="50" rx="18" ry="12" fill="#b0b0b0"/>
+</svg>
+</div>
+<div class="short">
+<h3 class="author"><span>Brian Dow</span></h3>
+<h3 class="job"><span>Dow Excavation, New Zealand</span></h3>
+</div>
+</div>
+</div>
+</li>
+<li class="item">
+<div class="texts">
+<p>Soc built our entire website from scratch and handled our Meta Ads campaign. Within two months, our lead volume doubled. He's incredibly responsive, explains everything clearly, and genuinely cares about results. Highly recommend!</p>
+<div class="author">
+<div class="person-icon-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+<circle cx="30" cy="30" r="30" fill="#f0f0f0"/>
+<circle cx="30" cy="22" r="10" fill="#b0b0b0"/>
+<ellipse cx="30" cy="50" rx="18" ry="12" fill="#b0b0b0"/>
+</svg>
+</div>
+<div class="short">
+<h3 class="author"><span>Maria Santos</span></h3>
+<h3 class="job"><span>E-Commerce Store Owner</span></h3>
+</div>
+</div>
+</div>
+</li>
+<li class="item">
+<div class="texts">
+<p>We hired Soc to overhaul our SEO and set up Google Ads. Our organic traffic went up significantly and our cost-per-click dropped. He's very knowledgeable, thorough, and delivers on time. A pleasure to work with.</p>
+<div class="author">
+<div class="person-icon-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+<circle cx="30" cy="30" r="30" fill="#f0f0f0"/>
+<circle cx="30" cy="22" r="10" fill="#b0b0b0"/>
+<ellipse cx="30" cy="50" rx="18" ry="12" fill="#b0b0b0"/>
+</svg>
+</div>
+<div class="short">
+<h3 class="author"><span>James Reyes</span></h3>
+<h3 class="job"><span>Real Estate Agency Director</span></h3>
+</div>
+</div>
+</div>
+</li>
+<li class="item">
+<div class="texts">
+<p>Soc redesigned our Shopify store and set up our email automations through Zapier. The whole process was smooth and professional. He walked us through every step and made sure we understood how everything worked. Fantastic work!</p>
+<div class="author">
+<div class="person-icon-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+<circle cx="30" cy="30" r="30" fill="#f0f0f0"/>
+<circle cx="30" cy="22" r="10" fill="#b0b0b0"/>
+<ellipse cx="30" cy="50" rx="18" ry="12" fill="#b0b0b0"/>
+</svg>
+</div>
+<div class="short">
+<h3 class="author"><span>Claire Nguyen</span></h3>
+<h3 class="job"><span>Online Boutique Founder</span></h3>
+</div>
+</div>
+</div>
+</li>
+<li class="item">
+<div class="texts">
+<p>Working with Soc on our social media strategy was one of the best decisions we made. He took over our content calendar, ran our ads, and grew our following steadily. He's proactive, creative, and very easy to communicate with.</p>
+<div class="author">
+<div class="person-icon-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+<circle cx="30" cy="30" r="30" fill="#f0f0f0"/>
+<circle cx="30" cy="22" r="10" fill="#b0b0b0"/>
+<ellipse cx="30" cy="50" rx="18" ry="12" fill="#b0b0b0"/>
+</svg>
+</div>
+<div class="short">
+<h3 class="author"><span>David Lim</span></h3>
+<h3 class="job"><span>Wellness Brand Manager</span></h3>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<style>
+.shane_tm_testimonials .texts p { font-size: 17px; line-height: 1.8; }
+.person-icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.shane_tm_testimonials .author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+</style>
+
+<script>
+(function waitForOwl() {
+  if (typeof jQuery === 'undefined' || typeof jQuery.fn.owlCarousel === 'undefined') {
+    setTimeout(waitForOwl, 200);
+    return;
+  }
+  jQuery(document).ready(function($) {
+    setTimeout(function() {
+      var $carousel = $('#testimonials-carousel');
+      if ($carousel.hasClass('owl-loaded')) {
+        $carousel.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+        $carousel.find('.owl-stage-outer').children().unwrap();
+      }
+      $carousel.addClass('owl-carousel').owlCarousel({
+        items: 1,
+        loop: false,
+        autoplay: false,
+        nav: true,
+        dots: true,
+        mouseDrag: true,
+        touchDrag: true,
+        navText: ['&larr;', '&rarr;']
+      });
+    }, 800);
+  });
+})();
+</script>
+
+
+<!-- <div class="shane_tm_section" id="news">
+<div class="shane_tm_news">
+<div class="container">
+<div class="shane_tm_title">
+<span>News</span>
+<h3>Latest News</h3>
+</div>
+<div class="news_list">
+<ul>
+<li class="wow fadeInLeft" data-wow-duration="1.5s">
+<div class="list_inner">
+<div class="image">
+<img src="img/thumbs/4-3.jpg" alt />
+<div class="main" data-img-url="img/news/1.jpg"></div>
+<a class="shane_tm_full_link" href="#"></a>
+</div>
+<div class="details">
+<h3 class="title"><a href="#">Developers watch out for these burnout symptoms</a></h3>
+<p class="date">By <a href="#">Alex Watson</a> <span>02 February 2022</span></p>
+</div>
+<div class="news_hidden_details">
+<div class="news_popup_informations">
+<div class="text">
+<p>Shane is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Kura, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s">
+<div class="list_inner">
+<div class="image">
+<img src="img/thumbs/4-3.jpg" alt />
+<div class="main" data-img-url="img/news/2.jpg"></div>
+<a class="shane_tm_full_link" href="#"></a>
+</div>
+<div class="details">
+<h3 class="title"><a href="#">How to be appreciated for your hard work as a developer</a></h3>
+<p class="date">By <a href="#">Brook Kennedy</a> <span>25 January 2022</span></p>
+</div>
+<div class="news_hidden_details">
+<div class="news_popup_informations">
+<div class="text">
+<p>Shane is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Kura, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".4s">
+<div class="list_inner">
+<div class="image">
+<img src="img/thumbs/4-3.jpg" alt />
+<div class="main" data-img-url="img/news/3.jpg"></div>
+<a class="shane_tm_full_link" href="#"></a>
+</div>
+<div class="details">
+<h3 class="title"><a href="#">How designers and developers can collaborate better</a></h3>
+<p class="date">By <a href="#">Paola Atkins</a> <span>12 January 2022</span></p>
+</div>
+<div class="news_hidden_details">
+<div class="news_popup_informations">
+<div class="text">
+<p>Shane is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
+<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
+<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Kura, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div> -->
+
+
+<div class="shane_tm_section" id="contact">
+<div class="shane_tm_talk">
+<div class="shape">
+<img class="svg" src="img/svg/paper.svg" alt />
+</div>
+<div class="background" id="talk">
+<a class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=l6JN5M12BbE',containment:'#talk',autoPlay:true, loop:true, showControls:false, mute:true, startAt:0,opacity:1, quality:'default'}"></a>
+<div class="overlay"></div>
+</div>
+<div class="talk_inner">
+<div class="text wow fadeInUp" data-wow-duration="1.5s">
+<h3>Let's work together!</h3>
+</div>
+<div class="button wow fadeInUp" data-wow-duration="1.5s">
+<a href="mailto:socmoreno00@gmail.com">Make an enquiry</a>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="shane_tm_contact_popup">
+<div class="popup_description_wrap">
+<div class="contact_title">
+<h3>Get in touch</h3>
+</div>
+<div class="wrapper">
+<div class="left">
+<div class="fields">
+
+<div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
+<div class="empty_notice"><span>Please Fill Required Fields</span></div>
+<div class="first">
+<ul>
+<li>
+<input id="name" type="text" placeholder="Name">
+</li>
+<li>
+<input id="email" type="text" placeholder="Email">
+</li>
+</ul>
+</div>
+<div class="last">
+<textarea id="message" placeholder="Message"></textarea>
+</div>
+<div class="shane_tm_button" data-position="left">
+<a id="send_message" href="#">
+<span>Send Message</span>
+</a>
+</div>
+
+</form>
+</div>
+</div>
+<div class="right">
+<div class="map_wrap">
+<div class="map" id="ieatmaps"></div>
+</div>
+</div>
+</div>
+<div class="short_info">
+<ul>
+<li>
+<div class="list_inner">
+<i class="icon-location"></i>
+<p>General Santos, Philippines</p>
+</div>
+</li>
+<li>
+<div class="list_inner">
+<i class="icon-phone-1"></i>
+<p><a href="#">+63 907 820 1654</a></p>
+</div>
+</li>
+<li>
+<div class="list_inner">
+<i class="icon-share-1"></i>
+<ul class="social">
+<li><a href="#"><i class="icon-facebook-squared"></i></a></li>
+<li><a href="#"><i class="icon-twitter-squared"></i></a></li>
+<li><a href="#"><i class="icon-linkedin-squared"></i></a></li>
+<li><a href="#"><i class="icon-behance-squared"></i></a></li>
+<a href="#">socmorenoonofre@gmail.com</a></p>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div class="shane_tm_section">
+<div class="shane_tm_copyright">
+<div class="container">
+<div class="inner">
+<p>&copy; 2024 by <a href="#" target="_blank">Soc Moreno</a>. All rights reserved.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="mouse-cursor cursor-outer"></div>
+<div class="mouse-cursor cursor-inner"></div>
+
+
+<div class="progressbar">
+<a href="#"><span class="text">To Top</span></a>
+<span class="line"></span>
+</div>
+
+</div>
+
+
+<script src="js/jquery.js"></script>
+
+<script src="js/plugins.js"></script>
+<script src="js/init.js"></script>
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5bpEs3xlB8vhxNFErwoo3MXR64uavf6Y&amp;callback=initMap"></script> -->
+
+</body>
+
+
+</html>
+
+
 <div class="shane_tm_section">
     <div class="shane_tm_skills">
     <div class="container">
@@ -488,365 +852,3 @@
 </li> -->
 </ul>
 </div>
-
-<div class="shane_tm_section" id="testimonials">
-<div class="shane_tm_testimonials">
-<div class="container">
-<div class="testimonials_inner wow fadeInUp" data-wow-duration="1.5s">
-<div class="left">
-<div class="shane_tm_title">
-<span>Testimonials</span>
-<h3>What clients say about working with me</h3>
-</div>
-</div>
-<div class="right">
-<ul class="owl-carousel" id="testimonials-carousel">
-<li class="item">
-<div class="texts">
-<p>Thank you for your valuable insight and assistance by creating such an easy to use, logical system. I look forward to working with you again in the future.</p>
-<div class="author">
-<div class="person-icon-wrap">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
-<circle cx="30" cy="30" r="30" fill="#f0f0f0"/>
-<circle cx="30" cy="22" r="10" fill="#b0b0b0"/>
-<ellipse cx="30" cy="50" rx="18" ry="12" fill="#b0b0b0"/>
-</svg>
-</div>
-<div class="short">
-<h3 class="author"><span>Brian Dow</span></h3>
-<h3 class="job"><span>Dow Excavation, New Zealand</span></h3>
-</div>
-</div>
-</div>
-</li>
-<li class="item">
-<div class="texts">
-<p>Soc built our entire website from scratch and handled our Meta Ads campaign. Within two months, our lead volume doubled. He's incredibly responsive, explains everything clearly, and genuinely cares about results. Highly recommend!</p>
-<div class="author">
-<div class="person-icon-wrap">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
-<circle cx="30" cy="30" r="30" fill="#f0f0f0"/>
-<circle cx="30" cy="22" r="10" fill="#b0b0b0"/>
-<ellipse cx="30" cy="50" rx="18" ry="12" fill="#b0b0b0"/>
-</svg>
-</div>
-<div class="short">
-<h3 class="author"><span>Maria Santos</span></h3>
-<h3 class="job"><span>E-Commerce Store Owner</span></h3>
-</div>
-</div>
-</div>
-</li>
-<li class="item">
-<div class="texts">
-<p>We hired Soc to overhaul our SEO and set up Google Ads. Our organic traffic went up significantly and our cost-per-click dropped. He's very knowledgeable, thorough, and delivers on time. A pleasure to work with.</p>
-<div class="author">
-<div class="person-icon-wrap">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
-<circle cx="30" cy="30" r="30" fill="#f0f0f0"/>
-<circle cx="30" cy="22" r="10" fill="#b0b0b0"/>
-<ellipse cx="30" cy="50" rx="18" ry="12" fill="#b0b0b0"/>
-</svg>
-</div>
-<div class="short">
-<h3 class="author"><span>James Reyes</span></h3>
-<h3 class="job"><span>Real Estate Agency Director</span></h3>
-</div>
-</div>
-</div>
-</li>
-<li class="item">
-<div class="texts">
-<p>Soc redesigned our Shopify store and set up our email automations through Zapier. The whole process was smooth and professional. He walked us through every step and made sure we understood how everything worked. Fantastic work!</p>
-<div class="author">
-<div class="person-icon-wrap">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
-<circle cx="30" cy="30" r="30" fill="#f0f0f0"/>
-<circle cx="30" cy="22" r="10" fill="#b0b0b0"/>
-<ellipse cx="30" cy="50" rx="18" ry="12" fill="#b0b0b0"/>
-</svg>
-</div>
-<div class="short">
-<h3 class="author"><span>Claire Nguyen</span></h3>
-<h3 class="job"><span>Online Boutique Founder</span></h3>
-</div>
-</div>
-</div>
-</li>
-<li class="item">
-<div class="texts">
-<p>Working with Soc on our social media strategy was one of the best decisions we made. He took over our content calendar, ran our ads, and grew our following steadily. He's proactive, creative, and very easy to communicate with.</p>
-<div class="author">
-<div class="person-icon-wrap">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
-<circle cx="30" cy="30" r="30" fill="#f0f0f0"/>
-<circle cx="30" cy="22" r="10" fill="#b0b0b0"/>
-<ellipse cx="30" cy="50" rx="18" ry="12" fill="#b0b0b0"/>
-</svg>
-</div>
-<div class="short">
-<h3 class="author"><span>David Lim</span></h3>
-<h3 class="job"><span>Wellness Brand Manager</span></h3>
-</div>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<style>
-.person-icon-wrap {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: inline-block;
-  flex-shrink: 0;
-}
-.shane_tm_testimonials .author {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-</style>
-
-<script>
-(function waitForOwl() {
-  if (typeof jQuery === 'undefined' || typeof jQuery.fn.owlCarousel === 'undefined') {
-    setTimeout(waitForOwl, 200);
-    return;
-  }
-  jQuery(document).ready(function($) {
-    setTimeout(function() {
-      var $carousel = $('#testimonials-carousel');
-      if ($carousel.hasClass('owl-loaded')) {
-        $carousel.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
-        $carousel.find('.owl-stage-outer').children().unwrap();
-      }
-      $carousel.addClass('owl-carousel').owlCarousel({
-        items: 1,
-        loop: false,
-        autoplay: false,
-        nav: true,
-        dots: true,
-        mouseDrag: true,
-        touchDrag: true,
-        navText: ['&larr;', '&rarr;']
-      });
-    }, 800);
-  });
-})();
-</script>
-
-
-<!-- <div class="shane_tm_section" id="news">
-<div class="shane_tm_news">
-<div class="container">
-<div class="shane_tm_title">
-<span>News</span>
-<h3>Latest News</h3>
-</div>
-<div class="news_list">
-<ul>
-<li class="wow fadeInLeft" data-wow-duration="1.5s">
-<div class="list_inner">
-<div class="image">
-<img src="img/thumbs/4-3.jpg" alt />
-<div class="main" data-img-url="img/news/1.jpg"></div>
-<a class="shane_tm_full_link" href="#"></a>
-</div>
-<div class="details">
-<h3 class="title"><a href="#">Developers watch out for these burnout symptoms</a></h3>
-<p class="date">By <a href="#">Alex Watson</a> <span>02 February 2022</span></p>
-</div>
-<div class="news_hidden_details">
-<div class="news_popup_informations">
-<div class="text">
-<p>Shane is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
-<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
-<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Kura, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
-</div>
-</div>
-</div>
-</div>
-</li>
-<li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s">
-<div class="list_inner">
-<div class="image">
-<img src="img/thumbs/4-3.jpg" alt />
-<div class="main" data-img-url="img/news/2.jpg"></div>
-<a class="shane_tm_full_link" href="#"></a>
-</div>
-<div class="details">
-<h3 class="title"><a href="#">How to be appreciated for your hard work as a developer</a></h3>
-<p class="date">By <a href="#">Brook Kennedy</a> <span>25 January 2022</span></p>
-</div>
-<div class="news_hidden_details">
-<div class="news_popup_informations">
-<div class="text">
-<p>Shane is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
-<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
-<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Kura, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
-</div>
-</div>
-</div>
-</div>
-</li>
-<li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".4s">
-<div class="list_inner">
-<div class="image">
-<img src="img/thumbs/4-3.jpg" alt />
-<div class="main" data-img-url="img/news/3.jpg"></div>
-<a class="shane_tm_full_link" href="#"></a>
-</div>
-<div class="details">
-<h3 class="title"><a href="#">How designers and developers can collaborate better</a></h3>
-<p class="date">By <a href="#">Paola Atkins</a> <span>12 January 2022</span></p>
-</div>
-<div class="news_hidden_details">
-<div class="news_popup_informations">
-<div class="text">
-<p>Shane is a leading web design agency with an award-winning design team that creates innovative, effective websites that capture your brand, improve your conversion rates, and maximize your revenue to help grow your business and achieve your goals.</p>
-<p>In today’s digital world, your website is the first interaction consumers have with your business. That's why almost 95 percent of a user’s first impression relates to web design. It’s also why web design services can have an immense impact on your company’s bottom line.</p>
-<p>That’s why more companies are not only reevaluating their website’s design but also partnering with Kura, the web design agency that’s driven more than $2.4 billion in revenue for its clients. With over 50 web design awards under our belt, we're confident we can design a custom website that drives sales for your unique business.</p>
-</div>
-</div>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div> -->
-
-
-<div class="shane_tm_section" id="contact">
-<div class="shane_tm_talk">
-<div class="shape">
-<img class="svg" src="img/svg/paper.svg" alt />
-</div>
-<div class="background" id="talk">
-<a class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=l6JN5M12BbE',containment:'#talk',autoPlay:true, loop:true, showControls:false, mute:true, startAt:0,opacity:1, quality:'default'}"></a>
-<div class="overlay"></div>
-</div>
-<div class="talk_inner">
-<div class="text wow fadeInUp" data-wow-duration="1.5s">
-<h3>Let's work together!</h3>
-</div>
-<div class="button wow fadeInUp" data-wow-duration="1.5s">
-<a href="mailto:socmoreno00@gmail.com">Make an enquiry</a>
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="shane_tm_contact_popup">
-<div class="popup_description_wrap">
-<div class="contact_title">
-<h3>Get in touch</h3>
-</div>
-<div class="wrapper">
-<div class="left">
-<div class="fields">
-
-<div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
-<div class="empty_notice"><span>Please Fill Required Fields</span></div>
-<div class="first">
-<ul>
-<li>
-<input id="name" type="text" placeholder="Name">
-</li>
-<li>
-<input id="email" type="text" placeholder="Email">
-</li>
-</ul>
-</div>
-<div class="last">
-<textarea id="message" placeholder="Message"></textarea>
-</div>
-<div class="shane_tm_button" data-position="left">
-<a id="send_message" href="#">
-<span>Send Message</span>
-</a>
-</div>
-
-</form>
-</div>
-</div>
-<div class="right">
-<div class="map_wrap">
-<div class="map" id="ieatmaps"></div>
-</div>
-</div>
-</div>
-<div class="short_info">
-<ul>
-<li>
-<div class="list_inner">
-<i class="icon-location"></i>
-<p>General Santos, Philippines</p>
-</div>
-</li>
-<li>
-<div class="list_inner">
-<i class="icon-phone-1"></i>
-<p><a href="#">+63 907 820 1654</a></p>
-</div>
-</li>
-<li>
-<div class="list_inner">
-<i class="icon-share-1"></i>
-<ul class="social">
-<li><a href="#"><i class="icon-facebook-squared"></i></a></li>
-<li><a href="#"><i class="icon-twitter-squared"></i></a></li>
-<li><a href="#"><i class="icon-linkedin-squared"></i></a></li>
-<li><a href="#"><i class="icon-behance-squared"></i></a></li>
-<a href="#">socmorenoonofre@gmail.com</a></p>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
-
-<div class="shane_tm_section">
-<div class="shane_tm_copyright">
-<div class="container">
-<div class="inner">
-<p>&copy; 2024 by <a href="#" target="_blank">Soc Moreno</a>. All rights reserved.</p>
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="mouse-cursor cursor-outer"></div>
-<div class="mouse-cursor cursor-inner"></div>
-
-
-<div class="progressbar">
-<a href="#"><span class="text">To Top</span></a>
-<span class="line"></span>
-</div>
-
-</div>
-
-
-<script src="js/jquery.js"></script>
-
-<script src="js/plugins.js"></script>
-<script src="js/init.js"></script>
-<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5bpEs3xlB8vhxNFErwoo3MXR64uavf6Y&amp;callback=initMap"></script> -->
-
-</body>
-
-
-</html>
