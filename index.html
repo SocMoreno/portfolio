@@ -500,13 +500,35 @@
 </div>
 </div>
 <div class="right">
-<ul class="owl-carousel">
+<ul class="owl-carousel" id="testimonials-carousel">
+<li class="item">
+<div class="texts">
+<p>Thank you for your valuable insight and assistance by creating such an easy to use, logical system. I look forward to working with you again in the future.</p>
+<div class="author">
+<div class="person-icon-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+<circle cx="30" cy="30" r="30" fill="#f0f0f0"/>
+<circle cx="30" cy="22" r="10" fill="#b0b0b0"/>
+<ellipse cx="30" cy="50" rx="18" ry="12" fill="#b0b0b0"/>
+</svg>
+</div>
+<div class="short">
+<h3 class="author"><span>Brian Dow</span></h3>
+<h3 class="job"><span>Dow Excavation, New Zealand</span></h3>
+</div>
+</div>
+</div>
+</li>
 <li class="item">
 <div class="texts">
 <p>Soc built our entire website from scratch and handled our Meta Ads campaign. Within two months, our lead volume doubled. He's incredibly responsive, explains everything clearly, and genuinely cares about results. Highly recommend!</p>
 <div class="author">
-<div class="image">
-<div class="main" data-img-url="img/about/1.jpg"></div>
+<div class="person-icon-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+<circle cx="30" cy="30" r="30" fill="#f0f0f0"/>
+<circle cx="30" cy="22" r="10" fill="#b0b0b0"/>
+<ellipse cx="30" cy="50" rx="18" ry="12" fill="#b0b0b0"/>
+</svg>
 </div>
 <div class="short">
 <h3 class="author"><span>Maria Santos</span></h3>
@@ -519,8 +541,12 @@
 <div class="texts">
 <p>We hired Soc to overhaul our SEO and set up Google Ads. Our organic traffic went up significantly and our cost-per-click dropped. He's very knowledgeable, thorough, and delivers on time. A pleasure to work with.</p>
 <div class="author">
-<div class="image">
-<div class="main" data-img-url="img/about/2.jpg"></div>
+<div class="person-icon-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+<circle cx="30" cy="30" r="30" fill="#f0f0f0"/>
+<circle cx="30" cy="22" r="10" fill="#b0b0b0"/>
+<ellipse cx="30" cy="50" rx="18" ry="12" fill="#b0b0b0"/>
+</svg>
 </div>
 <div class="short">
 <h3 class="author"><span>James Reyes</span></h3>
@@ -533,8 +559,12 @@
 <div class="texts">
 <p>Soc redesigned our Shopify store and set up our email automations through Zapier. The whole process was smooth and professional. He walked us through every step and made sure we understood how everything worked. Fantastic work!</p>
 <div class="author">
-<div class="image">
-<div class="main" data-img-url="img/about/3.jpg"></div>
+<div class="person-icon-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+<circle cx="30" cy="30" r="30" fill="#f0f0f0"/>
+<circle cx="30" cy="22" r="10" fill="#b0b0b0"/>
+<ellipse cx="30" cy="50" rx="18" ry="12" fill="#b0b0b0"/>
+</svg>
 </div>
 <div class="short">
 <h3 class="author"><span>Claire Nguyen</span></h3>
@@ -547,8 +577,12 @@
 <div class="texts">
 <p>Working with Soc on our social media strategy was one of the best decisions we made. He took over our content calendar, ran our ads, and grew our following steadily. He's proactive, creative, and very easy to communicate with.</p>
 <div class="author">
-<div class="image">
-<div class="main" data-img-url="img/about/1.jpg"></div>
+<div class="person-icon-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+<circle cx="30" cy="30" r="30" fill="#f0f0f0"/>
+<circle cx="30" cy="22" r="10" fill="#b0b0b0"/>
+<ellipse cx="30" cy="50" rx="18" ry="12" fill="#b0b0b0"/>
+</svg>
 </div>
 <div class="short">
 <h3 class="author"><span>David Lim</span></h3>
@@ -562,7 +596,51 @@
 </div>
 </div>
 </div>
-</div> -->
+</div>
+
+<style>
+.person-icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.shane_tm_testimonials .author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+</style>
+
+<script>
+(function waitForOwl() {
+  if (typeof jQuery === 'undefined' || typeof jQuery.fn.owlCarousel === 'undefined') {
+    setTimeout(waitForOwl, 200);
+    return;
+  }
+  jQuery(document).ready(function($) {
+    setTimeout(function() {
+      var $carousel = $('#testimonials-carousel');
+      if ($carousel.hasClass('owl-loaded')) {
+        $carousel.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+        $carousel.find('.owl-stage-outer').children().unwrap();
+      }
+      $carousel.addClass('owl-carousel').owlCarousel({
+        items: 1,
+        loop: false,
+        autoplay: false,
+        nav: true,
+        dots: true,
+        mouseDrag: true,
+        touchDrag: true,
+        navText: ['&larr;', '&rarr;']
+      });
+    }, 800);
+  });
+})();
+</script>
 
 
 <!-- <div class="shane_tm_section" id="news">
